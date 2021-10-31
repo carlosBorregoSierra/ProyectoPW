@@ -4,15 +4,18 @@ import Footer from './componentes/Footer';
 import Header from './componentes/Header';
 import StudentList from './componentes/StudentList';
 import StudentItem from './componentes/EstudentItem';
+import Container from 'react-bootstrap/Container'
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"><Header /></header>
-      <StudentList />
-      <Footer />
-    </div>
+    <Container fluid>
+      <div className="container-fluid" >
+        <header><Header /></header>
+        <StudentList />
+        <Footer />
+       </div>
+    </Container>
   );
 }
 

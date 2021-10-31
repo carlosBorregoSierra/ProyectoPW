@@ -1,0 +1,10 @@
+.avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.item{
+    padding: 20px 0px;
+    border-top: 1px solid rgba(105, 101, 94, 0.596);
+    margin-bottom: 20px;
+}

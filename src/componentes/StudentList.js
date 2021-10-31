@@ -1,5 +1,7 @@
 import react from "react";
 import StudentItem from "./EstudentItem";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 
 const StudentList = () =>{
     const students = [
@@ -9,15 +11,17 @@ const StudentList = () =>{
         {id:4, nombre:'Alfre si', programa:'Derecho', sem:1}
     ]
     return(
-        <div>
-            { 
-                students.map (s=>(
-                    <>
-                        <StudentItem students={s}/> {/*recorrer la lista de estudiantes*/}
-                    </>
-                ))
-            } 
-        </div>
+        <Row>
+            <Col>
+                { 
+                    students.map (st=>(
+                        <div className="border">
+                            <StudentItem students={st}/> {/*recorrer la lista de estudiantes*/}
+                        </div>
+                    ))
+                } 
+            </Col>
+        </Row>
     );
 }
 export default StudentList;

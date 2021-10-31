@@ -1,12 +1,16 @@
 import react from "react";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 
 
 const Header = () => {
     return(
-        <div>
-            <h1>Gestion de Estudiantes</h1>
-            <h4>Crear/Editar/Borrar Estudiantes</h4>
-        </div>
+        <Row>
+            <Col className="col py5 text-center">
+                <h1>Gestion de Estudiantes</h1>
+                <span>Crear/Editar/Borrar Estudiantes</span>
+            </Col>
+        </Row>
     );
 }
 
