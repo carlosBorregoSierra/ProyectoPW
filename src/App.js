@@ -4,17 +4,18 @@ import Footer from './componentes/Footer';
 import Header from './componentes/Header';
 import StudentList from './componentes/StudentList';
 import StudentItem from './componentes/EstudentItem';
-import Container from 'react-bootstrap/Container'
-
+import Container from 'react-bootstrap/Container';
+import {BrowserRouter as Router} from 'react-router-dom';
+import MisRoutes from './MisRutas';
 
 function App() {
   return (
     <Container fluid>
-      <div className="container-fluid" >
-        <header><Header /></header>
-        <StudentList />
+      <Router>
+        <Header />
+        <MisRoutes/>
         <Footer />
-       </div>
+      </Router>
     </Container>
   );
 }
