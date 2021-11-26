@@ -1,9 +1,9 @@
 import React, { useState } from "react"; 
-export default function StudentForm(props){
+export default function ProductForm(props){
     const estadoInicialForm = {
         nombre:'',
-        programa:'',
-        sem:''
+        detalle:'',
+        precio:''
     };
     const [estadoForm, cambiarEstadoForm] = useState(estadoInicialForm);
 
@@ -24,16 +24,16 @@ export default function StudentForm(props){
     return(
         <form onSubmit={onSubmitForm}>
             <div className="form-group col col-lg-4">
-                <label htmlfor="nameStudent">Nombre Estudiante</label>
+                <label htmlfor="nameStudent">Product name</label>
                 <input type="text" name="nombre" className="form-control" id="nameStudent" value={estadoForm.name} onChange={gestionarCamposForm}/>
             </div>
             <div className="form-group col col-lg-4">
-                <label htmlfor="program">Programa</label>
-                <input type="text" name="programa" className="form-control" id="program" value={estadoForm.program} onChange={gestionarCamposForm}/>
+                <label htmlfor="program">Detalle</label>
+                <input type="text" name="detalle" className="form-control" id="program" value={estadoForm.program} onChange={gestionarCamposForm}/>
             </div>
             <div className="form-group col col-lg-4 mb-3">
-                <label htmlfor="grade">Semestre</label>
-                <input type="text" name="sem" className="form-control" id="grade" value={estadoForm.grado} onChange={gestionarCamposForm}/>
+                <label htmlfor="grade">Price</label>
+                <input type="text" name="precio" className="form-control" id="grade" value={estadoForm.grado} onChange={gestionarCamposForm}/>
             </div>
             <div className="mb-3">
             <button type="submit" className="btn btn-primary">Crear</button>

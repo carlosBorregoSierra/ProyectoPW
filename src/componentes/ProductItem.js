@@ -1,11 +1,10 @@
-import react from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import '../css/estilo.css';  
 
-const StudentItem = (props) =>{
-    const {nombre,programa,sem} = props.students; {/*Destructurar objeto*/}
+const ProductItem = (props) =>{
+    const {nombre, detalle, precio} = props.products; {/*Destructurar objeto*/}
     const controlarClick = (ev) =>{
         ev.preventDefault();
         console.log('se controló el click');
@@ -20,15 +19,15 @@ const StudentItem = (props) =>{
             Programa: {props.students.programa}<br/><br/>
                 */}
                 <Col md={2} sm={2}>
-                    <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" className="avatar"/>
+                    <img src="https://www.creativefabrica.com/wp-content/uploads/2019/04/Shopping-cart-icon-by-marco.livolsi2014-2-580x386.jpg" className="image"/>
                 </Col>
                 <Col md={7} sm={7}>
                     <h5>{nombre}<br/></h5>
-                    <p>
-                        {programa}<br/>
-                    </p>
                     <p className="text-muted">
-                        Sem:{sem}<br/><br/>
+                        {detalle}<br/>
+                    </p>
+                    <p>
+                        Price: {precio}<br/><br/>
                     </p>
                 </Col>
                 <Col md={3} sm={3}>
@@ -40,4 +39,4 @@ const StudentItem = (props) =>{
         </div>
     );
 }
-export default StudentItem;
+export default ProductItem;
