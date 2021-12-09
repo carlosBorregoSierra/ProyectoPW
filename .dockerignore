@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+build
+.dockerignore
+**/.git
+**/.DS_Store
+**/node_modules
+95acb684-63de-4f5a-8532-b24fb7a17dcd
